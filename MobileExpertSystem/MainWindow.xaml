@@ -1,0 +1,50 @@
+﻿<Window x:Class="MobileExpertSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MobileExpertSystem"
+        mc:Ignorable="d"
+        Title="MobileExpertSystem" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="QuestionsListView">
+                <TextBlock Text="Вопросы"/>
+            </ListView>
+            <ListView x:Name="AnswersListView" Grid.Column="1">
+                <TextBlock Text="Ответы"/>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddQuestionButton" Content="Добавить вопрос с ответом" Click="AddQuestionButton_Click"/>
+            <Button x:Name="AddRuleButton" Grid.Column="1" Content="Добавить правило" Click="AddRuleButton_Click"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <ListView x:Name="ResultsListView">
+                <TextBlock Text="Результаты"/>
+            </ListView>
+        </Grid>
+
+        <Button x:Name="AddResultButton" Grid.Row="1" Grid.Column="1" Content="Добавить результат" Click="AddResultButton_Click"/>
+    </Grid>
+</Window>

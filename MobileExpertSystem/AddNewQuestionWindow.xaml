@@ -1,0 +1,34 @@
+﻿<Window x:Class="MobileExpertSystem.AddNewQuestionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MobileExpertSystem"
+        mc:Ignorable="d"
+        Title="AddNewQuestionWindow" Height="280" Width="530">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView>
+            <TextBlock Text="Введите вопрос" FontSize="14"/>
+            <TextBox x:Name="Question" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите ответ #1" FontSize="14"/>
+            <TextBox x:Name="Answer1" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите ответ #2" FontSize="14"/>
+            <TextBox x:Name="Answer2" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите ответ #3, если такового не предусмотрено оставьте поле пустым" FontSize="14"/>
+            <TextBox x:Name="Answer3" FontSize="14" Width="515"/>
+        </ListView>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddQuestion" Content="Добавить" Click="AddQuestion_Click"/>
+            <Button x:Name="Cancel" Grid.Column="1" Content="Отмена" Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>

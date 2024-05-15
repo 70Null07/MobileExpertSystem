@@ -1,0 +1,44 @@
+﻿<Window x:Class="MobileExpertSystem.AddNewResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MobileExpertSystem"
+        mc:Ignorable="d"
+        Title="AddNewResultWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView>
+            <TextBlock Text="Введите название тарифа" FontSize="14"/>
+            <TextBox x:Name="TariffName" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите тип тарифа" FontSize="14"/>
+            <TextBox x:Name="PlanType" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите потребность в интернете" FontSize="14"/>
+            <TextBox x:Name="InternetNeeds" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите потребность в общении" FontSize="14"/>
+            <TextBox x:Name="ChatActivity" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите потребность в минутах" FontSize="14"/>
+            <TextBox x:Name="MinutesNeeds" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите потребность в сообщениях" FontSize="14"/>
+            <TextBox x:Name="MessagesNeeds" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите потребность в подписке" FontSize="14"/>
+            <TextBox x:Name="SubscribeAvaible" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите возможность использования в IoT" FontSize="14"/>
+            <TextBox x:Name="IoTType" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите возможность раздачи трафика" FontSize="14"/>
+            <TextBox x:Name="ShareAvaible" FontSize="14" Width="515"/>
+        </ListView>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddResult" Content="Добавить" Click="AddResult_Click"/>
+            <Button x:Name="Cancel" Grid.Column="1" Content="Отмена" Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>

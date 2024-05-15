@@ -1,0 +1,32 @@
+﻿<Window x:Class="MobileExpertSystem.AddNewRuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MobileExpertSystem"
+        mc:Ignorable="d"
+        Title="AddNewRuleWindow" Height="200" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView>
+            <TextBlock Text="Введите правило" FontSize="14"/>
+            <TextBox x:Name="Rule" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите выбор пользователя на правило" FontSize="14"/>
+            <TextBox x:Name="RuleChoise" FontSize="14" Width="515"/>
+            <TextBlock Text="Введите результат выполнения правила" FontSize="14"/>
+            <TextBox x:Name="Result" FontSize="14" Width="515"/>
+        </ListView>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddRule" Content="Добавить" Click="AddQuestion_Click"/>
+            <Button x:Name="Cancel" Grid.Column="1" Content="Отмена" Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>
